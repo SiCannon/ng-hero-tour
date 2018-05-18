@@ -1,0 +1,13 @@
+.hero-link {
+    background-color: aqua;
+    padding: 10px;
+    display: inline-block;
+    font-family: fantasy, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+}
+
+.hero-link:hover {
+    background-color: blueviolet;
+    color: chartreuse;
+    cursor: pointer;
+}
