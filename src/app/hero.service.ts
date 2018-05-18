@@ -27,11 +27,11 @@ export class HeroService {
 
     getHero(id: number): Observable<Hero> {
         const url = `${this.heroesUrl}/${id}`;
-        return this.httpClient.get<Hero>(this.heroesUrl);
-            // .pipe(
-            //     tap(x => this.log(`.getHero(${id})`)),
-            //     catchError(this.handleError(`getHero()`, { id: -1, name: 'El Zilcho' }))
-            // );
+        return this.httpClient.get<Hero>(url)
+            .pipe(
+                tap(x => this.log(`.getHero(${id})`)),
+                catchError(this.handleError(`getHero()`, { id: -1, name: 'El Zilcho' }))
+            );
     }
 
     private log(message: string) {
