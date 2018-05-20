@@ -1,7 +1,7 @@
-<div *ngIf="messageService.anyMessages()">
-    <h2>Messages</h2>
+<div class="messages" #scrollMe [scrollTop]="scrollMe.scrollHeight">
     <button class="clear" (click)="messageService.clear()">clear</button>
     <div *ngFor="let message of messageService.messages">
         {{message}}
     </div>
+    <a href="#end"></a>
 </div>
