@@ -65,6 +65,10 @@ export class HeroService {
             );
     }
     
+    search(term: string): Observable<Hero[]> {
+        return this.http.get<Hero[]>(`${this.heroesUrl}?name=${term}`);
+    }
+    
     private log(message: string) {
         this.messageService.add("HeroService" + message);
     }

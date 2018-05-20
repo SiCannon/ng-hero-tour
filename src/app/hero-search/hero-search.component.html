@@ -1,0 +1,6 @@
+<div>
+    <label>Search:
+        <input #searchBox (keyup)="search(searchBox.value)">
+        <a *ngFor="let hero of heroes" class="search-result" routerLink="/detail/{{hero.id}}">{{hero.name}}</a>
+    </label>
+</div>
